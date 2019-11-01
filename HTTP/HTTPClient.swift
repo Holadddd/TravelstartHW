@@ -105,7 +105,7 @@ class HTTPClient {
         let urlString = Bundle.TSValueForString(key: TSConstant.taipeiOpenAPI) + tsRequest.endPoint
 
         let url = URL(string: urlString)!
-
+        
         var request = URLRequest(url: url)
 
         request.allHTTPHeaderFields = tsRequest.headers

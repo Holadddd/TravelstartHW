@@ -21,6 +21,7 @@
 		DB507C7E236C21DE0058DB45 /* Bundel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C7D236C21DE0058DB45 /* Bundel+Extension.swift */; };
 		DB507C82236C24DF0058DB45 /* TSConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C81236C24DF0058DB45 /* TSConstant.swift */; };
 		DB507C85236C27B60058DB45 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C84236C27B60058DB45 /* UserRequest.swift */; };
+		DB507C88236C38330058DB45 /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C87236C38330058DB45 /* JSONObject.swift */; };
 		F685725E6EE809DE096E365D /* Pods_TravelstartHW_TravelstartHWUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D7D873D82FDA789B92C7A9 /* Pods_TravelstartHW_TravelstartHWUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		DB507C7D236C21DE0058DB45 /* Bundel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundel+Extension.swift"; sourceTree = "<group>"; };
 		DB507C81236C24DF0058DB45 /* TSConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSConstant.swift; sourceTree = "<group>"; };
 		DB507C84236C27B60058DB45 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		DB507C87236C38330058DB45 /* JSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
 		DFA099034825F46B33F4AC08 /* Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartHW-TravelstartHWUITests/Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF3FEDEE3AA01B9F0FBCAE18 /* Pods_TravelstartHW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelstartHW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCB9F6920DB7D74BE11A483 /* Pods-TravelstartHWTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartHWTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartHWTests/Pods-TravelstartHWTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,10 +142,10 @@
 				DB507C7F236C24960058DB45 /* Resource */,
 				DB507C7C236C21BE0058DB45 /* Extension */,
 				DB507C73236C1E450058DB45 /* Model */,
-				DB054707236AEAC500BCE512 /* AppDelegate.swift */,
 				DB507C74236C1E550058DB45 /* Controller */,
 				DB507C75236C1E650058DB45 /* View */,
 				DB054709236AEAC500BCE512 /* SceneDelegate.swift */,
+				DB054707236AEAC500BCE512 /* AppDelegate.swift */,
 				DB054710236AEAC600BCE512 /* Assets.xcassets */,
 				DB054712236AEAC600BCE512 /* LaunchScreen.storyboard */,
 				DB054715236AEAC600BCE512 /* Info.plist */,
@@ -172,6 +174,7 @@
 		DB507C73236C1E450058DB45 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB507C86236C37F40058DB45 /* Object */,
 				DB507C83236C27A30058DB45 /* User */,
 				DB507C7B236C20900058DB45 /* HTTP */,
 			);
@@ -241,6 +244,14 @@
 				DB507C84236C27B60058DB45 /* UserRequest.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		DB507C86236C37F40058DB45 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				DB507C87236C38330058DB45 /* JSONObject.swift */,
+			);
+			path = Object;
 			sourceTree = "<group>";
 		};
 		FD27C43F71F6764BF51DE692 /* Frameworks */ = {
@@ -460,6 +471,7 @@
 				DB054708236AEAC500BCE512 /* AppDelegate.swift in Sources */,
 				DB507C72236C1E3C0058DB45 /* HTTPClient.swift in Sources */,
 				DB05470A236AEAC500BCE512 /* SceneDelegate.swift in Sources */,
+				DB507C88236C38330058DB45 /* JSONObject.swift in Sources */,
 				DB507C82236C24DF0058DB45 /* TSConstant.swift in Sources */,
 				DB507C7E236C21DE0058DB45 /* Bundel+Extension.swift in Sources */,
 				DB507C85236C27B60058DB45 /* UserRequest.swift in Sources */,
