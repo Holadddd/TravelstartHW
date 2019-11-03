@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		DB507C82236C24DF0058DB45 /* TSConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C81236C24DF0058DB45 /* TSConstant.swift */; };
 		DB507C85236C27B60058DB45 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C84236C27B60058DB45 /* UserRequest.swift */; };
 		DB507C88236C38330058DB45 /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C87236C38330058DB45 /* JSONObject.swift */; };
+		DB507C8B236F0A490058DB45 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB507C8A236F0A490058DB45 /* Reachability.m */; };
 		F685725E6EE809DE096E365D /* Pods_TravelstartHW_TravelstartHWUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D7D873D82FDA789B92C7A9 /* Pods_TravelstartHW_TravelstartHWUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,9 @@
 		DB507C81236C24DF0058DB45 /* TSConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSConstant.swift; sourceTree = "<group>"; };
 		DB507C84236C27B60058DB45 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 		DB507C87236C38330058DB45 /* JSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
+		DB507C89236F0A480058DB45 /* TravelstartHW-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TravelstartHW-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB507C8A236F0A490058DB45 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		DB507C8C236F0A520058DB45 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DFA099034825F46B33F4AC08 /* Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartHW-TravelstartHWUITests/Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF3FEDEE3AA01B9F0FBCAE18 /* Pods_TravelstartHW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelstartHW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCB9F6920DB7D74BE11A483 /* Pods-TravelstartHWTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartHWTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartHWTests/Pods-TravelstartHWTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +153,9 @@
 				DB054710236AEAC600BCE512 /* Assets.xcassets */,
 				DB054712236AEAC600BCE512 /* LaunchScreen.storyboard */,
 				DB054715236AEAC600BCE512 /* Info.plist */,
+				DB507C8A236F0A490058DB45 /* Reachability.m */,
+				DB507C89236F0A480058DB45 /* TravelstartHW-Bridging-Header.h */,
+				DB507C8C236F0A520058DB45 /* Reachability.h */,
 			);
 			path = TravelstartHW;
 			sourceTree = "<group>";
@@ -275,6 +282,7 @@
 				DB054700236AEAC500BCE512 /* Sources */,
 				DB054701236AEAC500BCE512 /* Frameworks */,
 				DB054702236AEAC500BCE512 /* Resources */,
+				E2D757E69F9E09001EAF0D05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -312,6 +320,7 @@
 				DB054721236AEAC600BCE512 /* Sources */,
 				DB054722236AEAC600BCE512 /* Frameworks */,
 				DB054723236AEAC600BCE512 /* Resources */,
+				545CE76F3B4DECDCDE0DB64E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,6 +344,7 @@
 				TargetAttributes = {
 					DB054703236AEAC500BCE512 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					DB054719236AEAC600BCE512 = {
 						CreatedOnToolsVersion = 11.0;
@@ -394,6 +404,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		545CE76F3B4DECDCDE0DB64E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TravelstartHW-TravelstartHWUITests/Pods-TravelstartHW-TravelstartHWUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TravelstartHW-TravelstartHWUITests/Pods-TravelstartHW-TravelstartHWUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TravelstartHW-TravelstartHWUITests/Pods-TravelstartHW-TravelstartHWUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5C90944F4D480EB9CA173DDB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,6 +465,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E2D757E69F9E09001EAF0D05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TravelstartHW/Pods-TravelstartHW-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TravelstartHW/Pods-TravelstartHW-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TravelstartHW/Pods-TravelstartHW-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E60C3B4707226D89FB077A48 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +518,7 @@
 				DB507C88236C38330058DB45 /* JSONObject.swift in Sources */,
 				DB507C82236C24DF0058DB45 /* TSConstant.swift in Sources */,
 				DB507C7E236C21DE0058DB45 /* Bundel+Extension.swift in Sources */,
+				DB507C8B236F0A490058DB45 /* Reachability.m in Sources */,
 				DB507C85236C27B60058DB45 /* UserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +685,7 @@
 			baseConfigurationReference = AC1D9368BCF4C52D1567B9A1 /* Pods-TravelstartHW.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8WVK7NKZV;
 				INFOPLIST_FILE = TravelstartHW/Info.plist;
@@ -649,6 +695,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Holadddd.TravelstartHW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TravelstartHW/TravelstartHW-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -659,6 +707,7 @@
 			baseConfigurationReference = 2E9F9591E1CD393BFB37CEE8 /* Pods-TravelstartHW.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8WVK7NKZV;
 				INFOPLIST_FILE = TravelstartHW/Info.plist;
@@ -668,6 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Holadddd.TravelstartHW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TravelstartHW/TravelstartHW-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

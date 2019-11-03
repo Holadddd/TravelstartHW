@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
+//Able to expand different api
 enum TSUserRequest: TSRequest {
     
-    case taipeiOpenAPI(offset: Int)
+    case taipeiOpenAPI(offset: Int, limit: Int)
     
     var headers: [String : String] {
         switch self {
@@ -40,8 +40,8 @@ enum TSUserRequest: TSRequest {
     var endPoint: String {
         
         switch self {
-        case .taipeiOpenAPI(let offset):
-            return "?scope=resourceAquire&rid=36847f3f-deff-4183-a5bb-800737591de5&offset=\(offset)&limit=10"
+        case .taipeiOpenAPI(let offset,let limit):
+            return "?scope=resourceAquire&rid=36847f3f-deff-4183-a5bb-800737591de5&offset=\(offset)&limit=\(limit)"
         }
     }
     

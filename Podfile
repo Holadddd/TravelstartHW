@@ -7,6 +7,10 @@ target 'TravelstartHW' do
 
   # Pods for TravelstartHW
 
+  
+  pod 'Kingfisher'
+  pod 'MJRefresh'
+  
   target 'TravelstartHWTests' do
     inherit! :search_paths
     # Pods for testing

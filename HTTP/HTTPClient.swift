@@ -26,17 +26,15 @@ enum TSHTTPMethod: String {
     case POST
 }
 
-enum TSHTTPHeaderField: String {
-
-    case contentType = "Content-Type"
-
-    case auth = "Authorization"
-}
-
-enum TSHTTPHeaderValue: String {
-
-    case json = "application/json"
-}
+//enum TSHTTPHeaderField: String {
+//
+//
+//}
+//
+//enum TSHTTPHeaderValue: String {
+//
+//    
+//}
 
 protocol TSRequest {
 
