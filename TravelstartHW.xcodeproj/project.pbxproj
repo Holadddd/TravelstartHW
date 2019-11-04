@@ -23,6 +23,10 @@
 		DB507C85236C27B60058DB45 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C84236C27B60058DB45 /* UserRequest.swift */; };
 		DB507C88236C38330058DB45 /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C87236C38330058DB45 /* JSONObject.swift */; };
 		DB507C8B236F0A490058DB45 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB507C8A236F0A490058DB45 /* Reachability.m */; };
+		DB507C8F236FEB280058DB45 /* TouristTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB507C8E236FEB280058DB45 /* TouristTableViewCell.xib */; };
+		DB507C91236FEB450058DB45 /* TouristTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C90236FEB450058DB45 /* TouristTableViewCell.swift */; };
+		DB507C93236FECA10058DB45 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C92236FECA10058DB45 /* UITableView+Extension.swift */; };
+		DB507C95236FF4770058DB45 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB507C94236FF4770058DB45 /* UIColor+Extension.swift */; };
 		F685725E6EE809DE096E365D /* Pods_TravelstartHW_TravelstartHWUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D7D873D82FDA789B92C7A9 /* Pods_TravelstartHW_TravelstartHWUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,10 @@
 		DB507C89236F0A480058DB45 /* TravelstartHW-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TravelstartHW-Bridging-Header.h"; sourceTree = "<group>"; };
 		DB507C8A236F0A490058DB45 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DB507C8C236F0A520058DB45 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		DB507C8E236FEB280058DB45 /* TouristTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristTableViewCell.xib; sourceTree = "<group>"; };
+		DB507C90236FEB450058DB45 /* TouristTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristTableViewCell.swift; sourceTree = "<group>"; };
+		DB507C92236FECA10058DB45 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		DB507C94236FF4770058DB45 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		DFA099034825F46B33F4AC08 /* Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartHW-TravelstartHWUITests/Pods-TravelstartHW-TravelstartHWUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF3FEDEE3AA01B9F0FBCAE18 /* Pods_TravelstartHW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelstartHW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCB9F6920DB7D74BE11A483 /* Pods-TravelstartHWTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartHWTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartHWTests/Pods-TravelstartHWTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				DB507C76236C1F8C0058DB45 /* Main.storyboard */,
+				DB507C8D236FEAE40058DB45 /* TouristTableViewCell */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -225,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				DB507C7D236C21DE0058DB45 /* Bundel+Extension.swift */,
+				DB507C92236FECA10058DB45 /* UITableView+Extension.swift */,
+				DB507C94236FF4770058DB45 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -259,6 +270,15 @@
 				DB507C87236C38330058DB45 /* JSONObject.swift */,
 			);
 			path = Object;
+			sourceTree = "<group>";
+		};
+		DB507C8D236FEAE40058DB45 /* TouristTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB507C90236FEB450058DB45 /* TouristTableViewCell.swift */,
+				DB507C8E236FEB280058DB45 /* TouristTableViewCell.xib */,
+			);
+			path = TouristTableViewCell;
 			sourceTree = "<group>";
 		};
 		FD27C43F71F6764BF51DE692 /* Frameworks */ = {
@@ -383,6 +403,7 @@
 			files = (
 				DB507C77236C1F8C0058DB45 /* Main.storyboard in Resources */,
 				DB054714236AEAC600BCE512 /* LaunchScreen.storyboard in Resources */,
+				DB507C8F236FEB280058DB45 /* TouristTableViewCell.xib in Resources */,
 				DB054711236AEAC600BCE512 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,8 +532,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB507C93236FECA10058DB45 /* UITableView+Extension.swift in Sources */,
 				DB507C79236C1FB40058DB45 /* MainPageViewController.swift in Sources */,
 				DB054708236AEAC500BCE512 /* AppDelegate.swift in Sources */,
+				DB507C95236FF4770058DB45 /* UIColor+Extension.swift in Sources */,
+				DB507C91236FEB450058DB45 /* TouristTableViewCell.swift in Sources */,
 				DB507C72236C1E3C0058DB45 /* HTTPClient.swift in Sources */,
 				DB05470A236AEAC500BCE512 /* SceneDelegate.swift in Sources */,
 				DB507C88236C38330058DB45 /* JSONObject.swift in Sources */,

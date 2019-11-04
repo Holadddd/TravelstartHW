@@ -11,4 +11,10 @@ import Foundation
 struct TSConstant {
     
     static let taipeiOpenAPI = "TS_TaipeiOpenAPI"
+    
+    static let touristTableViewTitle = "台北市熱門景點"
+    
+    static let touristTableViewTintColorHex = "#67BEEA"
 }
+
+
