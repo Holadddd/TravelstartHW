@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C962EEA53B0C1B31D2EAD04 /* Pods_TravelstartHW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3FEDEE3AA01B9F0FBCAE18 /* Pods_TravelstartHW.framework */; };
 		C50D44F07E40F9B04BA95DDA /* Pods_TravelstartHWTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A2BE60259425190036C1CE /* Pods_TravelstartHWTests.framework */; };
+		DB0343262371C5C000E40C9D /* TouristCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0343252371C5C000E40C9D /* TouristCollectionViewCell.swift */; };
 		DB054708236AEAC500BCE512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB054707236AEAC500BCE512 /* AppDelegate.swift */; };
 		DB05470A236AEAC500BCE512 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB054709236AEAC500BCE512 /* SceneDelegate.swift */; };
 		DB054711236AEAC600BCE512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB054710236AEAC600BCE512 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		A242E08AA4B36E70A0F7330E /* Pods-TravelstartHWTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartHWTests.release.xcconfig"; path = "Target Support Files/Pods-TravelstartHWTests/Pods-TravelstartHWTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC1D9368BCF4C52D1567B9A1 /* Pods-TravelstartHW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelstartHW.debug.xcconfig"; path = "Target Support Files/Pods-TravelstartHW/Pods-TravelstartHW.debug.xcconfig"; sourceTree = "<group>"; };
 		C9D7D873D82FDA789B92C7A9 /* Pods_TravelstartHW_TravelstartHWUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelstartHW_TravelstartHWUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0343252371C5C000E40C9D /* TouristCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB054704236AEAC500BCE512 /* TravelstartHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelstartHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB054707236AEAC500BCE512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB054709236AEAC500BCE512 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				DB507C90236FEB450058DB45 /* TouristTableViewCell.swift */,
 				DB507C8E236FEB280058DB45 /* TouristTableViewCell.xib */,
+				DB0343252371C5C000E40C9D /* TouristCollectionViewCell.swift */,
 			);
 			path = TouristTableViewCell;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				DB507C7E236C21DE0058DB45 /* Bundel+Extension.swift in Sources */,
 				DB507C8B236F0A490058DB45 /* Reachability.m in Sources */,
 				DB507C85236C27B60058DB45 /* UserRequest.swift in Sources */,
+				DB0343262371C5C000E40C9D /* TouristCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

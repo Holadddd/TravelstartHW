@@ -59,6 +59,8 @@ struct ResultInfo: Codable  {
     
     var file: String
     
+    var jpgFiles: [String]?
+    
     var idpt: String
     
     var latitude: String
@@ -96,4 +98,27 @@ struct ResultInfo: Codable  {
         
         case avEnd, address
     }
+    
+    mutating func jpgFilesURLSlipAndfilter(){
+        
+        var filesArr = file.components(separatedBy: "http")
+        
+        for (index, element) in filesArr.enumerated() {
+            
+            filesArr[index] = "https" + element
+        }
+        
+        var jpgFilesUrlArr: [String] = []
+        
+        for jpgFilesUrl in filesArr {
+            
+            if jpgFilesUrl.contains(".jpg") || jpgFilesUrl.contains(".JPG"){
+                jpgFilesUrlArr.append(jpgFilesUrl)
+            }
+        }
+        
+        jpgFiles = jpgFilesUrlArr
+    }
 }
+
+

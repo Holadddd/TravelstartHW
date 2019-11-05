@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 enum fetchingError: Error {
     
@@ -19,6 +20,8 @@ class MainPageViewController: UIViewController {
     //for testing internet
     var reachability = Reachability(hostName: "www.apple.com")
    
+    var touristData: [ResultInfo] = []
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -56,23 +59,40 @@ class MainPageViewController: UIViewController {
         if checkInternetFunction() == true {
             
             HTTPClient.shared.request(TSUserRequest.taipeiOpenAPI(offset: 0, limit: 10)) {[weak self] result in
+                
                 guard let strongSelf = self else { fatalError() }
+                
                 switch result {
+                    
                 case .success(let data):
+                    
                     do {
                         
                     let data = try JSONDecoder().decode(TaipeiOpenAPIData.self, from: data)
-                        print(data)
+                        
+                        let fetchingResult = data.result.results.map{ resultInfo-> ResultInfo in
+                            
+                            var fixedResult = resultInfo
+                            
+                            fixedResult.jpgFilesURLSlipAndfilter()
+                            
+                            return fixedResult
+                        }
+                        
+                        strongSelf.touristData += fetchingResult
                         
                         DispatchQueue.main.async {
+                            
                             strongSelf.setupTableView()
+                            
+                            strongSelf.tableView.reloadData()
                         }
                     } catch {
                         print(error)
                     }
                 case . failure(let error):
-                    print(error)
                     
+                    print(error)
                 }
             }
         } else {
@@ -85,11 +105,9 @@ class MainPageViewController: UIViewController {
             
             present(controller, animated: true, completion: nil)
         }
-        
     }
     
     private func setupTableView() {
-        loadViewIfNeeded()
         
         tableView.dataSource = self
         
@@ -106,8 +124,28 @@ extension MainPageViewController: UITableViewDataSource {
         return 1
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+
+        return touristData.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TouristTableViewCell.identifier, for: indexPath) as? TouristTableViewCell else { fatalError() }
+        
+        let touristInfo = touristData[indexPath.section]
+        
+        cell.titleLabel.text = touristInfo.stitle
+        
+        cell.descriptLabel.text = touristInfo.description
+        
+        cell.indexPathInCode = indexPath
+        
+        cell.collectionView.delegate = self
+        
+        cell.collectionView.dataSource = self
+        
+        cell.collectionView.register(TouristCollectionViewCell.self, forCellWithReuseIdentifier: "TouristCollectionViewCell")
         
         return cell
     }
@@ -116,3 +154,60 @@ extension MainPageViewController: UITableViewDataSource {
 extension MainPageViewController: UITableViewDelegate {
     
 }
+
+extension MainPageViewController: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+        guard let cell = collectionView.superview?.superview as? TouristTableViewCell else { fatalError() }
+
+//        guard let indexPath = tableView.indexPath(for: cell) else { fatalError() }
+
+        guard let indexPath = cell.indexPathInCode else { fatalError() }
+        
+        guard let jpgFilesArr = touristData[indexPath.section].jpgFiles else { fatalError() }
+        
+        return jpgFilesArr.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TouristCollectionViewCell", for: indexPath) as? TouristCollectionViewCell else{ fatalError() }
+        
+        guard let tableViewCell = collectionView.superview?.superview as? TouristTableViewCell else { fatalError() }
+        
+        //        guard let indexPath = tableView.indexPath(for: cell) else { fatalError() }
+        
+        guard let tableViewCellIndexPath = tableViewCell.indexPathInCode else { fatalError() }
+        
+        guard let jpgFilesArr = touristData[tableViewCellIndexPath.section].jpgFiles else { fatalError() }
+        
+        let url = URL(string: jpgFilesArr[indexPath.row])
+        
+        cell.imageView.kf.setImage(with: url)
+        
+        return cell
+    }
+
+}
+
+extension MainPageViewController: UICollectionViewDelegate {
+
+}
+
+extension MainPageViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        
+        let height = collectionView.frame.height
+        
+        let size = CGSize(width: height, height: height)
+        
+        return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
+        
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+}
+

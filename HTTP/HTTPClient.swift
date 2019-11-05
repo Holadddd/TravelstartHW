@@ -115,3 +115,18 @@ class HTTPClient {
         return request
     }
 }
+
+struct ClientFixer {
+    
+    func filesURLSlip(fileSting: String) -> [String] {
+        
+        var url = fileSting.components(separatedBy: "http")
+        
+        print(url)
+        return []
+    }
+    
+    func jpgURLFilter(filesURL: [String]) {
+        
+    }
+}
